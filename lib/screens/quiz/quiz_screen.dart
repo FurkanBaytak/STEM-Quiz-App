@@ -16,10 +16,10 @@ class QuizScreen extends StatelessWidget {
         actions: [
           TextButton(
               onPressed: _controller.nextQuestion,
-              child: (_controller.questionNumber.value !=
+              child: Obx(() => Text((_controller.questionNumber.value !=
                       _controller.questions.length)
-                  ? Text("Atla")
-                  : Text("Bitir")),
+                  ? "Atla"
+                  : "Bitir"))),
         ],
       ),
       body: Body(),
