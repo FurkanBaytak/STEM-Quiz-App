@@ -46,7 +46,8 @@ class ScoreScreen extends StatelessWidget {
               ),
               Spacer(flex: 3),
               InkWell(
-                onTap: () => Get.to(QuizScreen()),
+                onTap: () =>
+                    Navigator.popUntil(context, ModalRoute.withName('/')),
                 child: Container(
                   width: double.infinity,
                   alignment: Alignment.center,
