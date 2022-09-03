@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/controllers/question_controller.dart';
-
 import 'components/body.dart';
 
 class QuizScreen extends StatelessWidget {
@@ -11,11 +10,16 @@ class QuizScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: BackButton(color: Colors.blue),
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          // ignore: deprecated_member_use
-          FlatButton(onPressed: _controller.nextQuestion, child: Text("Atla")),
+          TextButton(
+              onPressed: _controller.nextQuestion,
+              child: (_controller.questionNumber.value !=
+                      _controller.questions.length)
+                  ? Text("Atla")
+                  : Text("Bitir")),
         ],
       ),
       body: Body(),
