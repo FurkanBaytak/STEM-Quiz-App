@@ -16,7 +16,7 @@ class ProgressBar extends StatelessWidget {
       height: 35,
       decoration: BoxDecoration(
         border: Border.all(color: Color(0xFF3F4768), width: 3),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: GetBuilder<QuestionController>(
         init: QuestionController(),
@@ -28,7 +28,7 @@ class ProgressBar extends StatelessWidget {
                   width: constraints.maxWidth * controller.animation.value,
                   decoration: BoxDecoration(
                     gradient: kPrimaryGradient,
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
               ),
@@ -40,7 +40,7 @@ class ProgressBar extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                          "${30 - (controller.animation.value * 30).round()} Saniye Kaldı"),
+                          "${15 - (controller.animation.value * 15).round()} Saniye Kaldı"),
                       SvgPicture.asset("assets/icons/clock.svg"),
                     ],
                   ),
